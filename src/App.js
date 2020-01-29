@@ -3,19 +3,20 @@ import './App.css';
 import Layout from "./pages/Layout";
 import {BrowserRouter as Router} from 'react-router-dom';
 import Routes from "./router/Routes"
+import Home from "./pages/Home";
 
 function App() {
-  return (
+    return (
 
-      <Router>
-        <Layout>
+        <Router>
+            <Layout>
 
-        </Layout>
+            </Layout>
 
-        <Routes/>
+            <Routes/>
 
-      </Router>
-  );
+        </Router>
+    );
 }
 
 export default App;
