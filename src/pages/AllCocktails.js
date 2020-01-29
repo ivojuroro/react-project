@@ -12,7 +12,7 @@ class AllCocktails extends React.Component {
         this.state = {
             currentLetter: 'a',
             cocktails: [],
-        }
+        };
         this.changeLetter = this.changeLetter.bind(this);
         this.fillCocktails = this.fillCocktails.bind(this);
         this.fillCocktails();
@@ -32,21 +32,46 @@ class AllCocktails extends React.Component {
             })
 
 
-        })
+        });
         this.render();
 
     }
 
+    renderCards() {
+        if(this.state.currentLetter!=='x'&&this.state.currentLetter!=='u'){
+            return this.state.cocktails.map((m, i) =>
+                <Col lg={3} sm={12} md={6}>
+                    <Card id='card' style={{width: '15rem', margin: '10px'}}>
+
+
+                        <Card.Img variant="top" src={m.strDrinkThumb}/>
+                        <Card.Body>
+                            <Card.Title>{m.strDrink}</Card.Title>
+                            <Card.Text>
+                                {m.strAlcoholic}
+                            </Card.Text>
+                            <Button id='button'>Recipe</Button>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            )
+        }
+        else{
+            return <p>There are no cocktails starting by the letter chosen</p>
+        }
+    }
+
     changeLetter(letter) {
 
-        this.setState({
-            currentLetter: letter
-        })
+            this.setState({
+                currentLetter: letter
+            })
+
 
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.state.currentLetter !== prevState.currentLetter) {
+        if (this.state.currentLetter !== prevState.currentLetter && this.state.currentLetter!=='x'&&this.state.currentLetter!=='u') {
             this.fillCocktails();
         }
 
@@ -71,7 +96,7 @@ class AllCocktails extends React.Component {
                     {
                         this.renderLeters().map((letter, index) =>
 
-                            <Nav.Item onClick={() => this.changeLetter(letter)} >
+                            <Nav.Item id="nav-link" onClick={() => this.changeLetter(letter)}>
                                 <Nav.Link eventKey={index}>{letter}</Nav.Link>
                             </Nav.Item>
                         )
@@ -83,22 +108,7 @@ class AllCocktails extends React.Component {
 
                 <div>
                     <Row id='row'>
-                        {this.state.cocktails.map((m, i) =>
-                            <Col lg={3} sm={12} md={6}>
-                                <Card id='card' style={{width: '15rem', margin: '10px'}}>
-
-
-                                    <Card.Img variant="top" src={m.strDrinkThumb}/>
-                                    <Card.Body>
-                                        <Card.Title>{m.strDrink}</Card.Title>
-                                        <Card.Text>
-                                            {m.strAlcoholic}
-                                        </Card.Text>
-                                        <Button variant="outline-info">Recipe</Button>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        )}
+                        {this.renderCards()}
                     </Row>
                 </div>
 

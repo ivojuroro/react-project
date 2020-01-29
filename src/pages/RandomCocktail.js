@@ -1,7 +1,6 @@
 import React from 'react';
 
-import "./../styles/CocktailsCarousel.css"
-import axios from "axios";
+import "./../styles/CocktailsCarousel.css";
 
 class RandomCocktail extends React.Component {
     render() {

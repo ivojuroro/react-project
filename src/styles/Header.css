@@ -6,14 +6,20 @@ Navbar{
 .nav-link {
     text-align: center;
     font-family: 'News Cycle', sans-serif;
-    font-size: 19px;
+    font-size: 10px;
     color: grey;
+
 
 }
 
 #link{
     font-size: 60px;
+
 }
+#nav-link{
+    text-transform: uppercase;
+}
+
 
 a.nav-link:hover {
     cursor: pointer;
