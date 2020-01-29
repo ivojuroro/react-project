@@ -71,14 +71,16 @@ class AllCocktails extends React.Component {
                     {
                         this.renderLeters().map((letter, index) =>
 
-                            <Nav.Item id={"tab"}>
-                                <Nav.Link onClick={() => this.changeLetter(letter)}>{letter}</Nav.Link>
+                            <Nav.Item onClick={() => this.changeLetter(letter)} >
+                                <Nav.Link eventKey={index}>{letter}</Nav.Link>
                             </Nav.Item>
                         )
 
                     }
 
                 </Nav>
+
+
                 <div>
                     <Row id='row'>
                         {this.state.cocktails.map((m, i) =>
@@ -92,7 +94,7 @@ class AllCocktails extends React.Component {
                                         <Card.Text>
                                             {m.strAlcoholic}
                                         </Card.Text>
-                                        <Button variant="outline-info">Go somewhere</Button>
+                                        <Button variant="outline-info">Recipe</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>
