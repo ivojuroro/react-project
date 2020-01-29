@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=BioRhyme:800&display=swap');
+
+#container-carousel {
+
+}
+
 #carousel {
     margin-top: 50px;
     margin-bottom: 50px;
-    height: 500px;
-    width: 500px;
-    text-alignment: center;
+    font-family: 'Zilla Slab', serif;
 }
 
-#container-carousel {
-    align-content: center;
+#image-carousel{
+    height: 500px;
 }
