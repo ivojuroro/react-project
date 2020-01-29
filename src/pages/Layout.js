@@ -1,11 +1,11 @@
 import React from 'react';
 import {Container} from "react-bootstrap";
+import Header from "../components/Header";
 
 let Layout = (props) =>
     <div>
-        <Container id="container" style={{marginTop: "100px"}}>
-
-        </Container>
+        <Header/>
+        <Container id="container"/>
         {props.children}
     </div>;
 
