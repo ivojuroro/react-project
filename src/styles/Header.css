@@ -17,7 +17,7 @@ Navbar{
 
 a.nav-link:hover {
     cursor: pointer;
-    color: rebeccapurple;
+    color: #FFA6A6;
 }
 #nav{
     text-align: center;

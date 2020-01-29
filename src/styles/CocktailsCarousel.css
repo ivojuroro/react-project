@@ -1,0 +1,11 @@
+#carousel {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 500px;
+    width: 500px;
+    text-alignment: center;
+}
+
+#container-carousel {
+    align-content: center;
+}

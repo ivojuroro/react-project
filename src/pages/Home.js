@@ -1,11 +1,11 @@
 import React from 'react';
-import {Col, Row} from "react-bootstrap";
 import HomeParallax from "../components/HomeParallax";
+import CocktailsCarousel from "../components/CocktailsCarousel";
 
 let Home = (props) =>
     <div>
         <HomeParallax/>
-
+        <CocktailsCarousel/>
     </div>;
 
 export default Home;
