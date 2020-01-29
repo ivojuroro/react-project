@@ -4,7 +4,8 @@ import {Parallax} from "react-parallax";
 import './../styles/HomeParallax.css'
 import {Container} from "react-bootstrap";
 
-const headerImage = "https://images.unsplash.com/photo-1560508180-03f285f67ded?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80";
+const firstImage = "https://images.unsplash.com/photo-1560508180-03f285f67ded?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80";
+const secondImage = "white";
 
 const insideStyles = {
     padding: 20,
@@ -20,9 +21,9 @@ const headerStyle ={
 
 const HomeParallax = () => (
     <div>
-        <Parallax bgImage={headerImage} blur={{ min: -1, max: 3 }} style={headerStyle}>
+        <Parallax bgImage={firstImage} strength={500} style={headerStyle}>
             <div id="text-parallax">
-                <div style={insideStyles}>Cocktails</div>
+                <p style={insideStyles}>COCKTAILS</p>
             </div>
         </Parallax>
         <Container id="text-container">
@@ -32,6 +33,30 @@ const HomeParallax = () => (
                 If you like the site, please consider supporting us on Patreon by clicking the link below...
             </div>
         </Container>
+        <Parallax
+            bgImage={secondImage}
+            strength={500}
+            renderLayer={percentage => (
+                <div>
+                    <div
+                        style={{
+                            position: "absolute",
+                            background: `rgba(255, 166, 166, ${percentage * 1})`,
+                            left: "50%",
+                            top: "50%",
+                            borderRadius: "50%",
+                            transform: "translate(-50%,-50%)",
+                            width: percentage * 500,
+                            height: percentage * 500
+                        }}
+                    />
+                </div>
+            )}
+        >
+            <div id="text-second-parallex">
+                <div style={insideStyles}>Be the best barman among your friends!</div>
+            </div>
+        </Parallax>
     </div>
 );
 export default HomeParallax;
