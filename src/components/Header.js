@@ -8,9 +8,9 @@ import '../styles/Header.css'
 let Header=(props)=>
     <Nav className="justify-content-center" activeKey="/home">
 
-                <Link id="link" className="nav-link" to="/AllCoctails">All cocktails</Link>
+                <Link id="link" className="nav-link" to="/allCocktails">All cocktails</Link>
                 <Link id="link" className="nav-link" to="/home">Home</Link>
-                <Link id="link" className="nav-link" to="/surprise">Surprise me!</Link>
+                <Link id="link" className="nav-link" to="/surpriseMe">Surprise me!</Link>
 
     </Nav>;
 
