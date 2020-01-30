@@ -18,8 +18,16 @@ Navbar{
 }
 
 #link{
-    font-size: 40px;
+    font-size: 30px;
+    margin-top: 30px;
 
+}
+#link-home {
+    font-size:60px;
+
+}
+a#link-home:hover{
+    color: #ffa6a6;
 }
 #nav-link{
     text-transform: uppercase;
@@ -30,6 +38,7 @@ a.nav-link:hover {
     cursor: pointer;
     color: #FFA6A6;
 }
+
 #nav{
     text-align: center;
 }

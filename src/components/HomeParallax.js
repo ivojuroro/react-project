@@ -16,7 +16,7 @@ const insideStyles = {
 };
 
 const headerStyle = {
-    backgroundSize: "cover"
+    backgroundSize: "cover",
 };
 
 
@@ -24,7 +24,7 @@ const HomeParallax = () => (
     <div>
         <Parallax bgImage={firstImage} strength={500} style={headerStyle}>
             <div id="text-parallax">
-                <p style={insideStyles}>COCKTAILS</p>
+                <p style={insideStyles}>DRINKABLE</p>
             </div>
         </Parallax>
         <Container id="text-container">
