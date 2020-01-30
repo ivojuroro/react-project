@@ -6,7 +6,7 @@ import '../styles/Header.css'
 
 
 let Header=(props)=>
-    <Nav className="justify-content-center" activeKey="/home">
+    <Nav className="justify-content-center"  activeKey="/home" id={"navbar"}>
 
                 <Link id="link" className="nav-link" to="/allCocktails">All cocktails</Link>
                 <Link id="link" className="nav-link" to="/home">Home</Link>

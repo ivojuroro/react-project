@@ -15,7 +15,7 @@ class CocktailsCarousel extends React.Component {
     }
 
     fillCocktails() {
-        axios.get("https://the-cocktail-db.p.rapidapi.com/search.php?f=a", {
+        axios.get("https://the-cocktail-db.p.rapidapi.com/search.php?f=p", {
             headers: {
                 "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
                 "x-rapidapi-key": "5480d6b126mshfd28d4a2de5903cp1f87b0jsn25a6cbaf8821"

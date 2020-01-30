@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, Card, Col, Container, Nav, Row} from 'react-bootstrap';
 import '../styles/AllCocktails.css'
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 
 class AllCocktails extends React.Component {
@@ -37,8 +38,18 @@ class AllCocktails extends React.Component {
 
     }
 
+    goToDetails(drink) {
+        let algo = [];
+        algo[0] = drink;
+        console.log(algo);
+        return (
+            <Link to={`/cocktail/${drink.strId}`}/>
+        );
+
+    }
+
     renderCards() {
-        if(this.state.currentLetter!=='x'&&this.state.currentLetter!=='u'){
+        if (this.state.currentLetter !== 'x' && this.state.currentLetter !== 'u') {
             return this.state.cocktails.map((m, i) =>
                 <Col lg={3} sm={12} md={6}>
                     <Card id='card' style={{width: '15rem', margin: '10px'}}>
@@ -50,22 +61,23 @@ class AllCocktails extends React.Component {
                             <Card.Text>
                                 {m.strAlcoholic}
                             </Card.Text>
-                            <Button id='button'>Recipe</Button>
+                            <Link to={`/cocktail/${m.idDrink}`}>
+                                <Button id='button'>Recipe</Button>
+                            </Link>
                         </Card.Body>
                     </Card>
                 </Col>
             )
-        }
-        else{
-            return <p>There are no cocktails starting by the letter chosen</p>
+        } else {
+            return <p>There are no cocktails starting by the chosen letter</p>
         }
     }
 
     changeLetter(letter) {
 
-            this.setState({
-                currentLetter: letter
-            })
+        this.setState({
+            currentLetter: letter
+        })
 
 
     }
@@ -90,7 +102,13 @@ class AllCocktails extends React.Component {
     render() {
 
         return (
-            <Container>
+            <Container
+            style={{
+                zIndex: '-1'
+            }}
+
+
+            >
                 <Nav variant="tabs" defaultActiveKey="/home">
 
                     {

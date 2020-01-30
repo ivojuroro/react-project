@@ -5,9 +5,7 @@ import {Switch, Route} from "react-router-dom";
 import Home from './../pages/Home';
 import AllCocktails from "../pages/AllCocktails";
 import RandomCocktail from "../pages/RandomCocktail";
-
-
-
+import SelectedCocktailDetails from "../pages/SelectedCocktailDetails";
 
 
 let Routes = (props) =>
@@ -19,8 +17,9 @@ let Routes = (props) =>
             <AllCocktails/>
         </Route>
         <Route path={"/surpriseMe"}>
-            <RandomCocktail />
+            <RandomCocktail/>
         </Route>
+        <Route path={"/cocktail/:id"} component={SelectedCocktailDetails}/>
     </Switch>;
 
 export default Routes;

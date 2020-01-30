@@ -42,7 +42,7 @@ const HomeParallax = () => (
                     <div
                         style={{
                             position: "absolute",
-                            background: `rgba(255, 166, 166, ${percentage * 1})`,
+                            background: `rgba(255, 77, 77, ${percentage * 1})`,
                             left: "50%",
                             top: "50%",
                             borderRadius: "50%",

@@ -1,0 +1,65 @@
+#image {
+    width: 100%;
+    height: 600px; /* height of container */
+    object-fit: cover;
+    object-position: 10%;
+}
+
+#card {
+    justify-content: center;
+
+}
+
+#card p {
+    font-family: 'Zilla Slab', serif;
+    font-size: 20px;
+}
+
+#cardBack {
+    justify-content: center;
+    margin-top: 200px;
+}
+
+#name {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 60px;
+    color: #ffa6a6;
+
+}
+
+#total-card-back {
+    text-align: center;
+    background-color: white;
+    border-color: #ffa6a6;
+    border-width: 2px;
+    height: 600px;
+    justify-content: center;
+}
+
+#flippy-frontside {
+    background-color: #ffa6a6;
+    margin-top: 40px;
+    box-shadow: 0 0.5px 2.7px rgba(0, 0, 0, 0.078),
+    0 1.3px 6.9px rgba(0, 0, 0, 0.111),
+    0 2.7px 14.2px rgba(0, 0, 0, 0.139),
+    0 5.5px 29.2px rgba(0, 0, 0, 0.172),
+    0 15px 80px rgba(0, 0, 0, 0.25);
+}
+
+#flippy-backside {
+    background-color: white;
+    box-shadow: 0 0.5px 2.7px rgba(0, 0, 0, 0.078),
+    0 1.3px 6.9px rgba(0, 0, 0, 0.111),
+    0 2.7px 14.2px rgba(0, 0, 0, 0.139),
+    0 5.5px 29.2px rgba(0, 0, 0, 0.172),
+    0 15px 80px rgba(0, 0, 0, 0.25);
+}
+
+#ingredientes-table{
+margin-top: 25px;
+margin-bottom: 20px;
+}
+
+#title-ingredients{
+    font-weight: bold;
+}
