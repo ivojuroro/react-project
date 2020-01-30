@@ -71,7 +71,7 @@ class AllCocktails extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.state.currentLetter !== prevState.currentLetter && this.state.currentLetter!=='x'&&this.state.currentLetter!=='u') {
+        if (this.state.currentLetter !== prevState.currentLetter && this.state.currentLetter !== 'x' && this.state.currentLetter !== 'u') {
             this.fillCocktails();
         }
 
