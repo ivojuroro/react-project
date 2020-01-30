@@ -8,6 +8,7 @@
 #card {
     justify-content: center;
 
+
 }
 
 #card p {
@@ -18,6 +19,7 @@
 #cardBack {
     justify-content: center;
     margin-top: 200px;
+
 }
 
 #name {
@@ -36,6 +38,7 @@
     border-width: 2px;
     height: 600px;
     justify-content: center;
+    overflow: scroll;
 }
 
 #flippy-frontside {
