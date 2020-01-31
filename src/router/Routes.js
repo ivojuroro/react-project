@@ -10,7 +10,7 @@ import SelectedCocktailDetails from "../pages/SelectedCocktailDetails";
 
 let Routes = (props) =>
     <Switch>
-        <Route path={"/home"}>
+        <Route path={"/react-project"}>
             <Home/>
         </Route>
         <Route path={"/allCocktails"}>
