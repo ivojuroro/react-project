@@ -109,7 +109,7 @@ class AllCocktails extends React.Component {
 
 
             >
-                <Nav variant="tabs" defaultActiveKey="/home">
+                <Nav variant="tabs" defaultActiveKey="/react-project">
 
                     {
                         this.renderLeters().map((letter, index) =>
